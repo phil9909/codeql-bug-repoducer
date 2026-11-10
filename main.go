@@ -12,9 +12,7 @@ const testHost = "tls11.browserleaks.com" // any host which is not reachable via
 func main() {
 	client := http.Client{
 		Transport: &http.Transport{
-			TLSClientConfig: &tls.Config{
-				MinVersion: 0,
-			},
+			TLSClientConfig: &tls.Config{},
 		},
 	}
 
